@@ -54,14 +54,15 @@ async function main() {
 
   function extractSpanTitles(html) {
     const $ = cheerio.load(html);
-    const titles = [];
+    const results = [];
 
     $("span[title]").each((index, element) => {
       const title = $(element).attr("title");
-      titles.push(title);
+      const text = $(element).text().trim();
+      results.push({ text, title });
     });
 
-    return titles;
+    return results;
   }
 
   async function process(year) {
@@ -92,11 +93,15 @@ async function main() {
     }
 
     console.log("------------");
-    console.log("Found midden messages!");
+    console.log("Found hidden messages!");
     console.log("------------\n");
-    allTitles.forEach((t, i) => {
+    allTitles.forEach((dayResults, i) => {
       console.log(`Day ${i + 1}:\n`);
-      console.log(t.join("\n\n"));
+      dayResults.forEach((result) => {
+        console.log(`"${result.text}"`);
+        console.log(`${result.title}`);
+        console.log("");
+      });
       console.log("-----------");
     });
     return;
