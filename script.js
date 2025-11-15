@@ -95,6 +95,7 @@ async function main() {
     console.log("Found hidden messages!");
     console.log("------------\n");
     allTitles.forEach((dayResults, i) => {
+      if (!allTitles[i].length) return;
       console.log(`Day ${i + 1}:\n`);
       dayResults.forEach((result) => {
         console.log(`"${result.text}"`);
