@@ -1,6 +1,5 @@
 const cheerio = require("cheerio");
 
-// Access argv outside the async function
 const args = process.argv.slice(2);
 
 async function main() {
