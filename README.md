@@ -11,7 +11,7 @@ npm run sniff 2017
 
 ```sh
 # sniff a particular day only
-npm un sniff 2025-02
+npm run sniff 2025-02
 ```
 
 ## Pre-reqs
