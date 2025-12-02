@@ -1,6 +1,6 @@
 ## Usage
 
-Sniff all the easter eggs hidden in spans for a given year with `npm run siff -- <yyyy | yyyy-dd>`
+Sniff all the easter eggs hidden in spans for a given year with `npm run sniff <yyyy | yyyy-dd>`
 
 ex
 
