@@ -32,11 +32,10 @@ async function main() {
     return;
   }
 
-  // Determine target: positional only
   let yr = parsed.positional[0];
   let singleDay = null;
 
-  // if first positional is in YYYY-DD format, split it.
+  // if first positional is in YYYY-DD format, split
   if (yr && /^\d{4}-\d{1,2}$/.test(String(yr))) {
     const [y, d] = String(yr).split("-");
     yr = y;
